@@ -1,5 +1,7 @@
 devel/
 logs/
+log/
+install/
 build/
 bin/
 lib/
@@ -25,6 +27,7 @@ devel_isolated/
 *.dox
 *.wikidoc
 mkdocs.yml
+todo.md
 
 # eclipse stuff
 .project
