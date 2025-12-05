@@ -1,17 +1,16 @@
-# Welcome to MkDocs
-
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+# Index
+## ROS2
+  - [Useful --ros-args commands](ros-args.md)
 
 ## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+    workspace/                                   # Container workspace directory
+         container/                              # Mounted directory
+                .devcontainer/
+                       devcontainer.json         # VSCode dev container args
+                       Dockerfile                # The docker container
+                docs/
+                       index.md                  # Documentation entrypoint
+                       ...
+                README.md
+         additional packages/                    # Additional ROS2 packages from source
+         ...
