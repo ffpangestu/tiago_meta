@@ -1,12 +1,12 @@
 {
-  "name": "humble desktop",
-  "dockerFile": "Dockerfile",
+  "name": "tiago/gazebo/humble",
+  "dockerFile": "${localWorkspaceFolder}/containers/Dockerfile",
   "runArgs": [
     "--privileged",
     "--network=host",
     "--ipc=host"
   ],
-  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ubuntu/workspace/project,type=bind",
+  "workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder}/project,type=bind",
   "workspaceFolder": "/home/ubuntu/workspace",
   "mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind"
