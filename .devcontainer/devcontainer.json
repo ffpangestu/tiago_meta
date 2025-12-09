@@ -6,8 +6,8 @@
     "--network=host",
     "--ipc=host"
   ],
-  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ubuntu/workspace/container,type=bind",
-  "workspaceFolder": "/home/ubuntu/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ubuntu/workspace/project,type=bind",
+  "workspaceFolder": "/home/ubuntu/project",
   "mounts": [
     "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind"
   ]

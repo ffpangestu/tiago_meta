@@ -44,7 +44,7 @@ RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
 # Import the workspace
 RUN mkdir -p /home/ubuntu/workspace/tiago_ws/src
 WORKDIR /home/ubuntu/workspace/tiago_ws
-RUN vcs import --input https://raw.githubusercontent.com/pal-robotics/tiago_tutorials/humble-devel/tiago_public.repos src
+RUN vcs import --input https://raw.githubusercontent.com/ffpangestu/tiago_meta/refs/heads/main/projects.repos src
 RUN rosdep install --from-paths src -y --ignore-src
 
 # Build the workspace
@@ -52,4 +52,3 @@ SHELL ["/bin/bash", "-c"]
 WORKDIR /home/ubuntu/workspace/tiago_ws
 RUN source /opt/ros/humble/setup.bash \
     && colcon build --symlink-install
-RUN echo "source /home/$USERNAME/workspace/tiago_ws/install/setup.bash" >> /home/$USERNAME/.bashrc
